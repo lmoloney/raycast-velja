@@ -21,8 +21,8 @@ if (pkg.title !== "Velja") {
   errors.push(`Expected package.json title to be "Velja", found "${pkg.title}".`);
 }
 
-if (raw.includes("@velja-lmoloney-dev")) {
-  errors.push("Found dev AI mention (@velja-lmoloney-dev) in package.json.");
+if (raw.includes("@velja-dev") || raw.includes("@velja-lmoloney-dev")) {
+  errors.push("Found dev AI mention (@velja-dev) in package.json.");
 }
 
 if (errors.length > 0) {

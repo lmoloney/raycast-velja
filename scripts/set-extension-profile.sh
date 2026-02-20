@@ -19,9 +19,9 @@ const pkg = JSON.parse(raw);
 
 const profiles = {
   dev: {
-    name: "velja-lmoloney-dev",
+    name: "velja-dev",
     title: "Velja Dev",
-    mention: "@velja-lmoloney-dev",
+    mention: "@velja-dev",
   },
   prod: {
     name: "velja-raycast",
@@ -31,6 +31,10 @@ const profiles = {
 };
 
 function detectCurrentProfile() {
+  if (pkg.name === "velja-lmoloney-dev" && pkg.title === profiles.dev.title) {
+    return "dev";
+  }
+
   if (pkg.name === profiles.dev.name && pkg.title === profiles.dev.title) {
     return "dev";
   }
@@ -75,7 +79,7 @@ if (pkg.ai?.evals && Array.isArray(pkg.ai.evals)) {
 
     return {
       ...entry,
-      input: entry.input.replace(/@velja-(?:lmoloney-dev|raycast)\b/g, target.mention),
+      input: entry.input.replace(/@velja-(?:lmoloney-dev|dev|raycast)\b/g, target.mention),
     };
   });
 }

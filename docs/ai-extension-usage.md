@@ -10,7 +10,7 @@ This extension exposes AI tools so Raycast AI can query and manage Velja rules.
 
 Use the extension mention that matches your active profile:
 
-- Dev profile (default in this repo): `@velja-lmoloney-dev`
+- Dev profile (default in this repo): `@velja-dev`
 - Upstream/store profile: `@velja-raycast`
 
 ## Available AI tools
@@ -28,14 +28,14 @@ Use the extension mention that matches your active profile:
 
 ### Read-only queries
 
-- `@velja-lmoloney-dev What rules do I have for medium.com?`
-- `@velja-lmoloney-dev Show me all my enabled rules`
-- `@velja-lmoloney-dev Which rules can match https://dev.azure.com/my-org/project`
+- `@velja-dev What rules do I have for medium.com?`
+- `@velja-dev Show me all my enabled rules`
+- `@velja-dev Which rules can match https://dev.azure.com/my-org/project`
 
 ### Write queries
 
-- `@velja-lmoloney-dev Create a rule for medium.com that opens in Safari`
-- `@velja-lmoloney-dev Add a hostSuffix rule for github.com to Edge Beta profile 7`
+- `@velja-dev Create a rule for medium.com that opens in Safari`
+- `@velja-dev Add a hostSuffix rule for github.com to Edge Beta profile 7`
 
 ## Tool behavior guardrails
 
