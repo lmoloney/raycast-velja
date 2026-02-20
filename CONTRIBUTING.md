@@ -12,8 +12,8 @@
 
 ```bash
 # Clone the repo
-git clone https://github.com/lmoloney/velja-raycast.git
-cd velja-raycast
+git clone https://github.com/lmoloney/raycast-velja.git
+cd raycast-velja
 
 # Install dependencies
 npm install
@@ -23,6 +23,19 @@ npm run dev
 ```
 
 Development mode provides hot-reloading in Raycast. Open Raycast and your extension commands will appear.
+
+## Identity workflow (dev vs upstream)
+
+This repo intentionally defaults to a dev identity so it can run concurrently with a Store extension.
+
+```bash
+npm run profile:status         # Inspect current manifest identity
+npm run profile:prod           # Set upstream/store identity
+npm run profile:check-upstream # Guardrail before upstream porting
+npm run profile:dev            # Switch back to local dev identity
+```
+
+Before creating upstream branches/PRs, always switch to `profile:prod` and run `profile:check-upstream`.
 
 ## Project Structure
 
@@ -65,6 +78,8 @@ npm run dev          # Start dev mode with hot-reload
 npm run build        # Production build
 npm run lint         # ESLint
 npm run fix-lint     # Auto-fix lint issues
+npm run profile:dev  # Local concurrent identity
+npm run profile:prod # Upstream/store identity
 ```
 
 ## Debugging

@@ -42,8 +42,8 @@ A [Raycast](https://www.raycast.com/) extension for controlling [Velja](https://
 
 ```bash
 # Clone the repo
-git clone https://github.com/lmoloney/velja-raycast.git
-cd velja-raycast
+git clone https://github.com/lmoloney/raycast-velja.git
+cd raycast-velja
 
 # Install dependencies
 npm install
@@ -51,6 +51,25 @@ npm install
 # Start development mode (hot-reload in Raycast)
 npm run dev
 ```
+
+## Identity profiles (run local + store concurrently)
+
+This repo defaults to a **dev identity** so you can run it alongside a future Store version:
+
+- `name`: `velja-lmoloney-dev`
+- `title`: `Velja (Lmoloney Dev)`
+- AI mention: `@velja-lmoloney-dev`
+
+Switch profiles with:
+
+```bash
+npm run profile:status        # Show current profile
+npm run profile:prod          # Switch to upstream/store identity
+npm run profile:check-upstream
+npm run profile:dev           # Switch back to local dev identity
+```
+
+Upstream PR prep should always use the production profile (`velja-raycast` / `Velja`) and pass `profile:check-upstream`.
 
 See [CONTRIBUTING.md](CONTRIBUTING.md) for detailed development setup and guidelines.
 For release preparation, see [docs/release-checklist.md](docs/release-checklist.md).
@@ -67,7 +86,7 @@ See [docs/architecture.md](docs/architecture.md) for detailed architecture decis
 
 ## Project Status
 
-This project is under active development. See the [GitHub Issues](https://github.com/lmoloney/velja-raycast/issues) for the current roadmap.
+This project is under active development. See the [GitHub Issues](https://github.com/lmoloney/raycast-velja/issues) for the current roadmap.
 
 | Phase   | Status | Description                         |
 | ------- | ------ | ----------------------------------- |

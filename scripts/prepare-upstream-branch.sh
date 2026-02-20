@@ -9,6 +9,9 @@ fi
 UPSTREAM_REPO="${UPSTREAM_REPO:-/Users/luke/Developer/raycast-extensions-upstream}"
 BRANCH="$1"
 
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+"$SCRIPT_DIR/check-upstream-ready.sh"
+
 git -C "$UPSTREAM_REPO" fetch upstream
 git -C "$UPSTREAM_REPO" checkout -B "$BRANCH" upstream/main
 

@@ -250,6 +250,10 @@
     "dev": "ray develop",
     "fix-lint": "ray lint --fix",
     "lint": "ray lint",
+    "profile:check-upstream": "bash scripts/check-upstream-ready.sh",
+    "profile:dev": "bash scripts/set-extension-profile.sh dev",
+    "profile:prod": "bash scripts/set-extension-profile.sh prod",
+    "profile:status": "bash scripts/set-extension-profile.sh status",
     "publish": "ray publish",
     "test": "tsx --test tests/**/*.test.ts"
   }
