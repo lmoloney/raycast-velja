@@ -57,7 +57,7 @@ npm run dev
 This repo defaults to a **dev identity** so you can run it alongside a future Store version:
 
 - `name`: `velja-lmoloney-dev`
-- `title`: `Velja (Lmoloney Dev)`
+- `title`: `Velja Dev`
 - AI mention: `@velja-lmoloney-dev`
 
 Switch profiles with:

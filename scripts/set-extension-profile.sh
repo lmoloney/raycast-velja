@@ -20,7 +20,7 @@ const pkg = JSON.parse(raw);
 const profiles = {
   dev: {
     name: "velja-lmoloney-dev",
-    title: "Velja (Lmoloney Dev)",
+    title: "Velja Dev",
     mention: "@velja-lmoloney-dev",
   },
   prod: {
