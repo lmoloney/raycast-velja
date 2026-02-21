@@ -1,7 +1,7 @@
 {
   "$schema": "https://www.raycast.com/schemas/extension.json",
-  "name": "velja-raycast",
-  "title": "Velja",
+  "name": "velja-dev",
+  "title": "Velja Dev",
   "description": "Control Velja.app from Raycast",
   "icon": "icon.png",
   "author": "lmoloney",
@@ -152,7 +152,7 @@
     "instructions": "For questions about existing Velja rules, call list-velja-rules for broad overviews and find-velja-rules-by-domain for domain or URL queries. Treat matcher kinds as: host = exact host, hostSuffix = domain/subdomain suffix, urlPrefix = URL prefix. Never call create-velja-rule unless the user explicitly asks to create or change a rule. When creating Velja rules, call get-preferred-browsers first and use an exact browser identifier from that tool. For domain-based matcher selection, default matcherKind to hostSuffix unless the user asks for exact host or URL prefix behavior. Ask follow-up questions when required creation details are missing.",
     "evals": [
       {
-        "input": "@velja-raycast What rules do I have for medium.com?",
+        "input": "@velja-dev What rules do I have for medium.com?",
         "mocks": {
           "find-velja-rules-by-domain": {
             "query": "medium.com",
@@ -197,7 +197,7 @@
         ]
       },
       {
-        "input": "@velja-raycast show me all my rules",
+        "input": "@velja-dev show me all my rules",
         "mocks": {
           "list-velja-rules": {
             "totalRules": 1,
